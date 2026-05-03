@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appnest | Mobile Apps</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4F46E5', // Indigo 600
+                        secondary: '#818CF8', // Indigo 400
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        .slide-up {
+            animation: slideUp 0.6s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .delay-100 {
+            animation-delay: 100ms;
+        }
+
+        .delay-200 {
+            animation-delay: 200ms;
+        }
+
+        .delay-300 {
+            animation-delay: 300ms;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 font-sans flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <div
+                        class="w-10 h-10 bg-primary text-white rounded-lg flex items-center justify-center font-bold text-xl shadow-md">
+                        AN
+                    </div>
+                    <span class="ml-3 font-bold text-xl text-gray-900 tracking-tight">Appnest</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-btn text-primary font-medium transition-colors">Home</a>
+                    <a href="#apps"
+                        class="nav-btn text-gray-600 hover:text-primary font-medium transition-colors">Apps</a>
+                    <a href="privacy.html"
+                        class="nav-btn text-gray-600 hover:text-primary font-medium transition-colors">Privacy
+                        Policy</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button onclick="toggleMobileMenu()" class="text-gray-600 hover:text-primary focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-white border-t border-gray-100 px-2 pt-2 pb-3 space-y-1 sm:px-3 shadow-lg absolute w-full left-0">
+            <a href="#home" onclick="toggleMobileMenu()"
+                class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-primary bg-gray-50">Home</a>
+            <a href="#apps" onclick="toggleMobileMenu()"
+                class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">Apps</a>
+            <a href="privacy.html"
+                class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">Privacy
+                Policy</a>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow">
+
+        <!-- Hero Section -->
+        <div id="home" class="relative bg-white overflow-hidden fade-in">
+            <div class="absolute inset-0 bg-gradient-to-br from-indigo-50 to-white z-0"></div>
+            <div
+                class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-20 lg:py-32 flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 text-center lg:text-left mb-12 lg:mb-0 slide-up">
+                    <span
+                        class="inline-block py-1 px-3 rounded-full bg-indigo-100 text-primary text-sm font-semibold mb-6 tracking-wide">Official
+                        App Portfolio</span>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-6">
+                        Welcome to <br> <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-600">Appnest</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-600 mb-10 max-w-2xl mx-auto lg:mx-0">
+                        Discover top-quality mobile applications for iOS and Android. Designed for performance, built
+                        for you.
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+                        <a href="#apps"
+                            class="inline-flex items-center justify-center px-8 py-4 text-base font-medium rounded-xl text-white bg-primary hover:bg-indigo-700 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1">
+                            <i class="fas fa-layer-group mr-3 text-xl"></i>
+                            View Our Apps
+                        </a>
+                        <a href="mailto:endingsearch@gmail.com"
+                            class="inline-flex items-center justify-center px-8 py-4 text-base font-medium rounded-xl text-primary bg-indigo-50 hover:bg-indigo-100 transition-all">
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 flex justify-center slide-up delay-200">
+                    <div class="relative w-72 h-auto md:w-96">
+                        <!-- Abstract App Representation -->
+                        <div
+                            class="absolute inset-0 bg-gradient-to-tr from-primary to-purple-400 rounded-3xl transform rotate-6 opacity-20 blur-lg">
+                        </div>
+                        <div
+                            class="relative bg-white p-6 rounded-3xl shadow-2xl border border-gray-100 flex flex-col items-center">
+                            <div class="w-full flex justify-between items-center mb-8">
+                                <div class="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center">
+                                    <i class="fas fa-bars text-gray-400 text-sm"></i>
+                                </div>
+                                <span class="font-bold text-gray-800 tracking-tight">Appnest Studio</span>
+                                <div class="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center">
+                                    <i class="fas fa-search text-gray-400 text-sm"></i>
+                                </div>
+                            </div>
+                            <div
+                                class="w-32 h-32 rounded-3xl bg-gradient-to-br from-primary to-purple-500 mb-8 flex items-center justify-center shadow-lg transform hover:scale-105 transition-transform duration-300">
+                                <i class="fas fa-rocket text-5xl text-white"></i>
+                            </div>
+                            <div class="w-full space-y-4">
+                                <div
+                                    class="h-14 bg-gray-50 rounded-xl flex items-center px-4 justify-between border border-gray-100 hover:border-primary transition-colors cursor-default">
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center">
+                                            <i class="fas fa-music text-xs"></i>
+                                        </div>
+                                        <span class="font-medium text-gray-700">Sinhala Song MP3</span>
+                                    </div>
+                                </div>
+                                <div
+                                    class="h-14 bg-gray-50 rounded-xl flex items-center px-4 justify-between border border-gray-100 hover:border-primary transition-colors cursor-default">
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-8 h-8 rounded-full bg-green-100 text-green-600 flex items-center justify-center">
+                                            <i class="fas fa-language text-xs"></i>
+                                        </div>
+                                        <span class="font-medium text-gray-700">Morse Translator</span>
+                                    </div>
+                                </div>
+                                <div
+                                    class="h-14 bg-gray-50 rounded-xl flex items-center px-4 justify-between border border-gray-100 hover:border-primary transition-colors cursor-default">
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-8 h-8 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center">
+                                            <i class="fas fa-bell text-xs"></i>
+                                        </div>
+                                        <span class="font-medium text-gray-700">Ringtones MP3</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Available Apps Section -->
+        <div id="apps" class="py-20 bg-gray-50 border-t border-gray-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16 slide-up">
+                    <h2 class="text-primary font-semibold tracking-wide uppercase text-sm mb-2">Portfolio</h2>
+                    <h3 class="text-3xl font-bold text-gray-900 sm:text-4xl">Available Apps</h3>
+                    <p class="mt-4 text-lg text-gray-500">Download and experience our latest applications across iOS and
+                        Android platforms.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- App 1: iOS -->
+                    <div
+                        class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-xl hover:border-primary transition-all duration-300 transform hover:-translate-y-2 slide-up delay-100 flex flex-col">
+                        <div class="flex justify-between items-start mb-6">
+                            <div
+                                class="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center text-2xl shadow-inner">
+                                <i class="fas fa-music"></i>
+                            </div>
+                            <span
+                                class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-gray-100 text-gray-600">
+                                <i class="fab fa-apple mr-1"></i> iOS
+                            </span>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">Sinhala Song MP3</h4>
+                        <p class="text-gray-500 mb-8 flex-grow">Listen to your favorite Sinhala songs seamlessly on your
+                            Apple device.</p>
+                        <a href="https://apps.apple.com/us/app/sinhala-song-mp3/id6756199618" target="_blank"
+                            rel="noopener noreferrer"
+                            class="w-full inline-flex items-center justify-center px-4 py-3 bg-gray-50 hover:bg-primary text-gray-700 hover:text-white font-semibold rounded-xl transition-colors">
+                            View on App Store
+                        </a>
+                    </div>
+
+                    <!-- App 2: Android -->
+                    <div
+                        class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-xl hover:border-primary transition-all duration-300 transform hover:-translate-y-2 slide-up delay-200 flex flex-col">
+                        <div class="flex justify-between items-start mb-6">
+                            <div
+                                class="w-14 h-14 bg-green-50 text-green-600 rounded-2xl flex items-center justify-center text-2xl shadow-inner">
+                                <i class="fas fa-wave-square"></i>
+                            </div>
+                            <span
+                                class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-gray-100 text-gray-600">
+                                <i class="fab fa-android mr-1"></i> Android
+                            </span>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">Morse Code Translator</h4>
+                        <p class="text-gray-500 mb-8 flex-grow">Easily translate text to Morse code and vice versa with
+                            our intuitive tool.</p>
+                        <a href="https://play.google.com/store/apps/details?id=com.morsemaster.translator"
+                            target="_blank" rel="noopener noreferrer"
+                            class="w-full inline-flex items-center justify-center px-4 py-3 bg-gray-50 hover:bg-primary text-gray-700 hover:text-white font-semibold rounded-xl transition-colors">
+                            View on Google Play
+                        </a>
+                    </div>
+
+                    <!-- App 3: Android -->
+                    <div
+                        class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-xl hover:border-primary transition-all duration-300 transform hover:-translate-y-2 slide-up delay-300 flex flex-col">
+                        <div class="flex justify-between items-start mb-6">
+                            <div
+                                class="w-14 h-14 bg-purple-50 text-purple-600 rounded-2xl flex items-center justify-center text-2xl shadow-inner">
+                                <i class="fas fa-bell"></i>
+                            </div>
+                            <span
+                                class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-gray-100 text-gray-600">
+                                <i class="fab fa-android mr-1"></i> Android
+                            </span>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">Ringtones MP3</h4>
+                        <p class="text-gray-500 mb-8 flex-grow">Personalize your device with top-quality custom audio
+                            ringtones.</p>
+                        <a href="https://play.google.com/store/apps/details?id=kumudini.harmonyapps.ringtones"
+                            target="_blank" rel="noopener noreferrer"
+                            class="w-full inline-flex items-center justify-center px-4 py-3 bg-gray-50 hover:bg-primary text-gray-700 hover:text-white font-semibold rounded-xl transition-colors">
+                            View on Google Play
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Coming Soon Section -->
+        <div class="py-16 bg-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center slide-up">
+                <div
+                    class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-indigo-50 text-primary mb-6">
+                    <i class="fas fa-hourglass-half text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-8">Currently in Development</h3>
+
+                <div class="flex flex-wrap justify-center gap-3">
+                    <span
+                        class="px-5 py-2.5 bg-gray-50 border border-gray-200 text-gray-700 rounded-full text-sm font-medium shadow-sm hover:border-primary hover:text-primary transition-colors cursor-default">Science
+                        Quiz App</span>
+                    <span
+                        class="px-5 py-2.5 bg-gray-50 border border-gray-200 text-gray-700 rounded-full text-sm font-medium shadow-sm hover:border-primary hover:text-primary transition-colors cursor-default">Guess
+                        the City</span>
+                    <span
+                        class="px-5 py-2.5 bg-gray-50 border border-gray-200 text-gray-700 rounded-full text-sm font-medium shadow-sm hover:border-primary hover:text-primary transition-colors cursor-default">Math
+                        Quiz App</span>
+                    <span
+                        class="px-5 py-2.5 bg-gray-50 border border-gray-200 text-gray-700 rounded-full text-sm font-medium shadow-sm hover:border-primary hover:text-primary transition-colors cursor-default">Text
+                        Quotes App</span>
+                    <span
+                        class="px-5 py-2.5 bg-gray-50 border border-gray-200 text-gray-700 rounded-full text-sm font-medium shadow-sm hover:border-primary hover:text-primary transition-colors cursor-default">Wallpapers
+                        4K App</span>
+                    <span
+                        class="px-5 py-2.5 bg-gray-50 border border-gray-200 text-gray-700 rounded-full text-sm font-medium shadow-sm hover:border-primary hover:text-primary transition-colors cursor-default">Sinhala
+                        Songs MP3 (Android)</span>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0 text-center md:text-left">
+                    <div class="flex items-center justify-center md:justify-start mb-4">
+                        <div
+                            class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center font-bold text-sm shadow-md mr-3">
+                            AN
+                        </div>
+                        <span class="font-bold text-xl tracking-tight">Appnest</span>
+                    </div>
+                    <p class="text-gray-400 text-sm max-w-xs">Building innovative and engaging mobile experiences for
+                        everyday life.</p>
+                </div>
+                <div class="flex flex-col items-center md:items-end">
+                    <div class="flex space-x-6 mb-4">
+                        <a href="#home" class="text-gray-400 hover:text-white transition-colors text-sm">Home</a>
+                        <a href="#apps" class="text-gray-400 hover:text-white transition-colors text-sm">Apps</a>
+                        <a href="privacy.html" class="text-gray-400 hover:text-white transition-colors text-sm">Privacy
+                            Policy</a>
+                    </div>
+                    <a href="mailto:endingsearch@gmail.com"
+                        class="text-gray-400 hover:text-primary transition-colors text-sm flex items-center gap-2">
+                        <i class="fas fa-envelope"></i> endingsearch@gmail.com
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-10 pt-8 text-center text-sm text-gray-500">
+                &copy; <span id="year"></span> Appnest. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Handle mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+</body>
+
+</html>

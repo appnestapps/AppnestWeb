@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Appnest</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4F46E5', // Indigo 600
+                        secondary: '#818CF8', // Indigo 400
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        .slide-up {
+            animation: slideUp 0.6s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 font-sans flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center cursor-pointer" onclick="window.location.href='index.html'">
+                    <div
+                        class="w-10 h-10 bg-primary text-white rounded-lg flex items-center justify-center font-bold text-xl shadow-md">
+                        AN
+                    </div>
+                    <span class="ml-3 font-bold text-xl text-gray-900 tracking-tight">Appnest</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html"
+                        class="nav-btn text-gray-600 hover:text-primary font-medium transition-colors">Home</a>
+                    <a href="index.html#apps"
+                        class="nav-btn text-gray-600 hover:text-primary font-medium transition-colors">Apps</a>
+                    <a href="privacy.html" class="nav-btn text-primary font-medium transition-colors">Privacy Policy</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button onclick="toggleMobileMenu()" class="text-gray-600 hover:text-primary focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-white border-t border-gray-100 px-2 pt-2 pb-3 space-y-1 sm:px-3 shadow-lg absolute w-full left-0">
+            <a href="index.html"
+                class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">Home</a>
+            <a href="index.html#apps"
+                class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">Apps</a>
+            <a href="privacy.html"
+                class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-primary bg-gray-50">Privacy
+                Policy</a>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow py-12 px-4 sm:px-6 lg:px-8 fade-in">
+        <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-sm border border-gray-100 p-8 md:p-12 slide-up">
+
+            <a href="index.html"
+                class="inline-flex items-center text-primary hover:text-indigo-800 font-medium mb-8 transition-colors">
+                <i class="fas fa-arrow-left mr-2"></i> Back to Home
+            </a>
+
+            <div class="border-b border-gray-100 pb-8 mb-8">
+                <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight mb-3">Privacy Policy</h1>
+                <p class="text-sm font-medium text-gray-500 bg-gray-100 inline-block px-3 py-1 rounded-full">Last
+                    Updated: May 3rd, 2026</p>
+            </div>
+
+            <div class="text-gray-600 space-y-6 text-lg leading-relaxed">
+                <p>At Appnest we value your privacy and are committed to protecting your personal information. This
+                    Privacy Policy explains how we collect, use, and safeguard your data when you use our app. By using
+                    Our Apps you agree to the terms outlined in this policy.</p>
+
+                <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Information We Collect</h2>
+                <p>We may collect the following types of information when you use our app:</p>
+                <ul class="list-disc pl-6 space-y-3">
+                    <li><strong class="text-gray-900">Device Information:</strong> We may collect basic information
+                        about your device, such as device type, operating system, and unique device identifiers, to
+                        optimize app performance and deliver personalized content.</li>
+                    <li><strong class="text-gray-900">Usage Data:</strong> We collect information about how you interact
+                        with the app, such as the features you use and the music tracks you select, to improve your
+                        experience.</li>
+                    <li><strong class="text-gray-900">Push Notification Data:</strong> Through our use of OneSignal, we
+                        may collect data necessary to send you push notifications, such as device tokens or preferences,
+                        if you opt in to receive them.</li>
+                    <li><strong class="text-gray-900">Ad-Related Data:</strong> Through Google AdMob, we may collect
+                        information like your IP address, advertising ID, and browsing behavior to serve personalized
+                        ads and monetize the app.</li>
+                </ul>
+                <p>We do not collect sensitive personal information such as your name, email address, or phone number
+                    unless you voluntarily provide it (e.g., when contacting us).</p>
+
+                <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">How We Use Your Information</h2>
+                <p>We use the collected information for the following purposes:</p>
+                <ul class="list-disc pl-6 space-y-3">
+                    <li>To provide and improve the Ringtones MP3 app and its features.</li>
+                    <li>To send you push notifications about app updates, new ringtones, or promotions (via OneSignal)
+                        if you enable this feature.</li>
+                    <li>To display personalized advertisements through Google AdMob and generate revenue to keep the app
+                        free for users.</li>
+                    <li>To analyze app usage and performance to enhance your experience.</li>
+                </ul>
+
+                <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Third-Party Services</h2>
+                <p>We partner with the following third-party services, which may collect and process data as described
+                    below:</p>
+                <ul class="list-disc pl-6 space-y-3">
+                    <li><strong class="text-gray-900">OneSignal:</strong> We use OneSignal to send push notifications.
+                        If you opt in, OneSignal may collect device information and notification preferences. For more
+                        details, please review OneSignal’s Privacy Policy.</li>
+                    <li><strong class="text-gray-900">Google AdMob:</strong> We use Google AdMob to display ads in the
+                        app. AdMob may collect data such as your advertising ID and IP address to provide personalized
+                        ads. You can learn more in Google’s Privacy Policy.</li>
+                </ul>
+                <p>These third parties have their own privacy policies, and we encourage you to review them.</p>
+
+                <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Your Choices</h2>
+                <ul class="list-disc pl-6 space-y-3">
+                    <li><strong class="text-gray-900">Push Notifications:</strong> You can enable or disable push
+                        notifications in your device settings or within the app.</li>
+                    <li><strong class="text-gray-900">Ad Personalization:</strong> You can opt out of personalized ads
+                        by adjusting your device’s advertising settings (e.g., resetting your advertising ID or opting
+                        out of ad tracking).</li>
+                </ul>
+
+                <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Data Sharing</h2>
+                <p>We, at KD Creation, do not sell, trade, or share your personal information with third parties,
+                    except:</p>
+                <ul class="list-disc pl-6 space-y-3">
+                    <li>With OneSignal and Google AdMob, as described above, to provide app functionality and ads.</li>
+                    <li>When required by law or to protect the safety and rights of our users and the public.</li>
+                </ul>
+
+                <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Data Security</h2>
+                <p>We take reasonable measures to protect your information from unauthorized access, loss, or misuse.
+                    However, no app or online service can guarantee absolute security, and we encourage you to keep your
+                    device secure.</p>
+
+                <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Children’s Privacy</h2>
+                <p>Ringtones MP3 is not intended for children under 13. KD Creation does not knowingly collect personal
+                    information from children under 13. If you believe we have unintentionally collected such data,
+                    please contact us immediately.</p>
+
+                <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Changes to This Privacy Policy</h2>
+                <p>We may update this Privacy Policy from time to time. Any changes will be reflected with an updated
+                    “Last Updated” date at the top of this page. We encourage you to review this policy periodically.
+                </p>
+
+                <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Contact Us</h2>
+                <div class="bg-gray-50 p-6 rounded-xl border border-gray-100">
+                    <p class="mb-2">If you have questions, concerns, or requests regarding your privacy or this policy,
+                        please reach out to us at:</p>
+                    <p class="font-medium">Email: <a href="mailto:endingsearch@gmail.com"
+                            class="text-primary hover:text-indigo-800 transition-colors">endingsearch@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0 text-center md:text-left">
+                    <div class="flex items-center justify-center md:justify-start mb-4">
+                        <div
+                            class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center font-bold text-sm shadow-md mr-3">
+                            AN
+                        </div>
+                        <span class="font-bold text-xl tracking-tight">Appnest</span>
+                    </div>
+                    <p class="text-gray-400 text-sm max-w-xs">Building innovative and engaging mobile experiences for
+                        everyday life.</p>
+                </div>
+                <div class="flex flex-col items-center md:items-end">
+                    <div class="flex space-x-6 mb-4">
+                        <a href="index.html" class="text-gray-400 hover:text-white transition-colors text-sm">Home</a>
+                        <a href="index.html#apps"
+                            class="text-gray-400 hover:text-white transition-colors text-sm">Apps</a>
+                        <a href="privacy.html" class="text-gray-400 hover:text-white transition-colors text-sm">Privacy
+                            Policy</a>
+                    </div>
+                    <a href="mailto:endingsearch@gmail.com"
+                        class="text-gray-400 hover:text-primary transition-colors text-sm flex items-center gap-2">
+                        <i class="fas fa-envelope"></i> endingsearch@gmail.com
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-10 pt-8 text-center text-sm text-gray-500">
+                &copy; <span id="year"></span> Appnest. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Handle mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+</body>
+
+</html>
